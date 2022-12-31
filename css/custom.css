@@ -176,8 +176,8 @@ h6::before {
 /* 鼠标样式 */
 #cursor {
   position: fixed;
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   /* 这里改变跟随的底色 */
   background: rgb(57, 197, 187);
   border-radius: 8px;
