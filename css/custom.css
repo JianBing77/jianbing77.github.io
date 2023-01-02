@@ -176,12 +176,12 @@ h6::before {
 /* 鼠标样式 */
 #cursor {
   position: fixed;
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
   /* 这里改变跟随的底色 */
-  background: rgb(57, 197, 187);
+  background: rgba(57, 197, 187, 1);
   border-radius: 8px;
-  opacity: 0.25;
+  opacity: 0.50;
   z-index: 10086;
   pointer-events: none;
   transition: 0.2s ease-in-out;
@@ -274,4 +274,49 @@ h6::before {
 ::-moz-selection {
   color: #fff;
   background-color: var(--theme-color);
+}
+
+
+/* Twikoo 评论样式 */
+
+.tk-input .el-textarea__inner {
+  min-height: 120px !important;
+}
+
+#twikoo .OwO-body {
+  max-width: 100% !important;
+}
+
+#twikoo .OwO .OwO-body .OwO-items:nth-child(1),
+#twikoo .OwO .OwO-body .OwO-items:nth-child(4) {
+  max-height: 360px !important;
+}
+
+#twikoo .OwO-items li[title|=menhera] img {
+  width: 100% !important;
+  margin: 5px 10px;
+}
+
+.tk-comment .tk-owo-emotion[alt*=menhera] {
+  width: 300px !important;
+}
+
+.tk-comment .vemoji[alt|=menhera],
+.tk-comment .tk-owo-emotion[alt*=menhera] {
+  max-width: 300px !important;
+  max-height: 300px !important;
+  margin: 8px 1px;
+  display: block !important;
+}
+
+@media screen and (max-width: 768px) {
+  .tk-comment .vemoji[alt|=menhera], .tk-comment .tk-owo-emotion[alt*=menhera] {
+      max-width: calc(100% - 30px) !important;
+      max-height: calc(100% - 30px) !important;
+  }
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*=menhera] {
+      max-width: calc(50% - 10px);
+      box-sizing: border-box;
+  }
+  
 }
